@@ -1,5 +1,11 @@
 // Here we find the maximum number of ways to reach a given number using sum of 3,5 and 10.
-//First we 
+//First we initialize an array to zero
+//The value of first index is updated to 1
+//1 - Fisrt we start adding index value which are multiple of 3
+//2 - Add the values of index which are multiple of 5
+//3 - Add the values of index which are multiple of 10
+//The end result will return the maximum value of possible value combinations.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -7,28 +13,27 @@
 int count_number_of_ways(int score)
 {
     int i;
-    int result[score+1];
+    int result[score+1]; 
 
     // Initialize all the entries with 0
-    memset(result, 0, sizeof(int) * (score+1));      
-
-    // There is one way to reach NO score
-    result[0] = 1;
+    memset(result, 0, sizeof(int) * (score+1));      //setting all values to 0
+    
+    result[0] = 1;          // updating the first index value to 1
 
     // Count the ways using 3
     for(i = 3; i <= score; i++)
     {
-        result[i] = result[i] + result[i-3];
+        result[i] = result[i] + result[i-3];         // multiple of 3 index
     }
     // Count the ways using 3 and 5
     for(i = 5; i <= score; i++)
     {
-     result[i] = result[i] + result[i-5];
+     result[i] = result[i] + result[i-5];           // multiple of 5 index
     }
     // Count the ways using 3, 5 and 10
     for(i = 10; i <= score; i++)
     {
-     result[i] = result[i] + result[i-10];
+     result[i] = result[i] + result[i-10];      // multiple of 10 index
     }
     return result[score];
 }
@@ -41,3 +46,5 @@ int main()
     printf("%d\n", result);
     return 0;
 }
+
+OUTPUT: 2
