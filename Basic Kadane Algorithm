@@ -1,0 +1,26 @@
+// Here we find the largest sub array sum from a given array.
+//For subarray we need to have a contiguous value.
+
+Code:
+#include<stdio.h>
+int main()
+{
+    int a[100],i,tmax=0,max=0,n;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        tmax=tmax+a[i];
+        if(tmax<0)
+        {
+            tmax=0;
+        }
+        if(max<tmax)
+            max=tmax;
+    }
+    printf("%d",max);
+    return 0;
+}
