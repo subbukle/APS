@@ -1,0 +1,15 @@
+result=n&(n-1)
+result=0;
+while(n)
+{
+result=result+1;
+n=n&n-1;
+}
+result=n&1;
+result=-n;
+result=-n+1;
+
+result=n;
+result=(result>>3)<<3;
+if(result==n)
+printf("Guess What!");
