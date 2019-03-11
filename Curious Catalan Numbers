@@ -1,0 +1,6 @@
+Catalan NUmbers: These are the set of natural numbers which form a specific sequence. These usually occur in counting problems which invove 
+recursively-defined objects.
+The sequence is : 1,1,2,5,14,42,152,429,1430.....
+The mathematical expression for this is given by: c[n+1]=Σ(i=0 to n) P[i]*P[n-i].
+
+One of the application of this concept is : Counting the number of possible combination of parenthesis.
