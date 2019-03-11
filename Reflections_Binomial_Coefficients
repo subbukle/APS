@@ -1,0 +1,20 @@
+Binomial Coefficients:
+These are the positive integers which occur as the coefficients in binomail theorem.
+Following ways computes the binomial coefficients. 
+IMP: The range of the input (n aand k) and the application also decide which of the method must be chosen.
+
+1) Using the concept of 2D Matrix, here we use pre-computed values.
+2) Using recurssion.
+3) Using 1D array to compute specific value.
+
+*The first method is used when the values of 'n' and 'k' are large. One of the advantage of this method is the array location whose index ( ex: a[index]) value corresponds to k>n is not wasted as it is not used.
+Space Complexity - n*k
+This method also provides intermediate values.
+
+*Here we recursively build the value of required binomial coefficient.
+Space Complexity - 2^n-1
+This method computes values independently for each recursive call thus it is slightly slower when compared to the previous method.
+
+*This method is used when we require particular binomial coeficents.
+Space Complexity - k+1
+It is not good approach if we need to generate set of values.
