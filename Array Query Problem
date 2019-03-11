@@ -1,0 +1,26 @@
+Array Query Problem:
+
+Look up table technique:
+(In simple terms this technique can be defined as fetching of the prestored values.)
+Processing Time - n^2
+Memory Required - n^2
+Access Time - 1
+
+Kadane Algorithm:
+It is used to find maximum sub-array sum of the given array.
+Time Complexity - O(n), because it uses inly one for loop which traverse over the entire array length.
+Space Complexity - O(1).
+
+Square Root Decompositoin:
+It is used if the arrar elements( number ) are changing.
+Processing Time - n
+Memory Requirement - square_root(n).
+Access Time - square_root(n).
+
+Segment Tree:
+It is used when the given values aren't changing i.e, if it remains static and n is large value.
+Total nodes - 2*n-1.
+Time complexity for tree construction - O(n).
+Time complexity for query os O(logn).
+Time complexity for updating an element is O(log n)
+If the values are changing then it gets difficult to change the arrangement of the constructed tree. It requires to redesign the entire tree.
