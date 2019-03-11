@@ -1,0 +1,6 @@
+In some problem statements the solution or the result will be asked to be provided in the form of (10^9+7).
+*Here (10^9+7) is a largest prime number which fits in the range.
+*In case of division modular arithmetic is not applicable, therefore we take the inverse of second number thus convertinf it into multiplication 
+and then we apply the operation.
+* Carrying out the operation of %(10^9+7) in the preliminary stages is equal to performing hte operation on the final answer.
+* It is not mandatory that only 10^9 +7 must be selected, but most of the platforms consider this as a standard thus using it is recommended.
