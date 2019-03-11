@@ -1,0 +1,51 @@
+// What does this code do ?
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int guess_what(int a[], int n)
+{
+
+    int x, y;
+    int final_sum = 0, sum = 0;
+
+    for (x = 0; x < n; x++)
+    {
+        sum = 0;
+        for (y = x; y < n; y++)
+        {
+
+            sum = (sum | a[y]);
+            final_sum = final_sum + sum;
+
+        }
+    }
+    return final_sum;
+}
+
+
+int main()
+{
+    int a[] = { 1, 2, 3, 4, 5 };
+    int n = 5;
+    int result = guess_what(a, n);
+    printf("%d\n", result);
+    return 0;
+}
+
+
+
+Look at the answer after giving it a try. (Scroll down for answer )
+
+
+
+
+
+
+
+
+
+
+
+Answer : Sum of bitwise or of all possible subarrays
