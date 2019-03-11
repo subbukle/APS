@@ -1,0 +1,5 @@
+Process:
+->First find the profit by weight ratio and prioritize them. 
+->Start selecting those that yield maximum profit.
+->Weight gets reduced with every selection of item.
+->The last item you include might have a fraction of it.
