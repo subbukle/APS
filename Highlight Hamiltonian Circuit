@@ -1,5 +1,5 @@
 
-Hamiltonian 
+Hamiltonian Circuit:-
 #The number of ways a path can be traced such that all vertices are included in the path, the mathematical expression is given by---- n!.
 Here n indicates number of vertices.
 *The tracing can be either of the way that is first to last or last to first, therefore we divide the expression by 2. Therefore ----- n!/2.
