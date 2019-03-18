@@ -1,0 +1,82 @@
+#include<Stdio.h>
+#include<stdlib.h>
+
+#define SS 5
+
+struct queue
+{
+    int items[SS];
+    int front;
+    int rear;
+};
+
+typedef struct queue Q;
+
+void ENQUEUE(Q *q)
+{
+    if(q->rear==SS-1)
+        printf("Queue full\n");
+    else
+    {
+        int x;
+        printf("Enter push items\n");
+        scanf("%d",&x);
+        q->items[++(q->rear)]=x;
+    }
+}
+
+void DQUEUE(Q *q)
+{
+    if(q->front>q->rear)
+        printf("Queue empty\n");
+    else
+    {
+      int x;
+      x=q->items[(q->front)++];
+      printf("%d popped\n",x);
+    }
+}
+
+void display(Q q)
+{
+    int i;
+    if(q.front>q.rear)
+        printf("Queue empty\n");
+    else
+    {
+        printf("Queue elements are");
+        for(i=q.front;i<=q.rear;i++)
+            printf("%d ",q.items[i]);
+        printf("\n");
+    }
+}
+
+int main()
+{
+    Q q;
+    int choice;
+    q.rear=-1;
+    q.front=0;
+    do
+    {
+        printf("1->ENQUEUE\n2->DQUEUE\n3->DISPLAY\n4->Exit\n");
+        printf("Enter choice\n");
+        scanf("%d",&choice);
+        switch(choice)
+        {
+          case 1:
+                 ENQUEUE(&q);
+                 break;
+          case 2:
+                 DQUEUE(&q);
+                 break;
+          case 3:
+                 display(q);
+                 break;
+          case 4:
+                 break;
+          default:
+              printf("Enter the valid choice\n");
+        }
+    }while(choice!=4);
+}
