@@ -1,0 +1,78 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+#define SS 5
+
+struct stack
+{
+    int items[SS];
+    int top
+};
+
+typedef struct stack S;
+
+void PUSH(S *s)
+{
+    if(s->top==SS-1)
+        printf("Stack full\n");
+    else
+    {
+        int x;
+        printf("Enter push items\n");
+        scanf("%d",&x);
+        s->items[++(s->top)]=x;
+    }
+}
+
+void POP(S *s)
+{
+    if(s->top==-1)
+        printf("Stack empty\n");
+    else
+    {
+      int x;
+      x=s->items[(s->top)--];
+      printf("%d popped\n",x);
+    }
+}
+
+void PEEK(S s)
+{
+    if(s.top==-1)
+        printf("Stack empty\n");
+    else
+    {
+        int x;
+        x=s.items[(s.top)];
+        printf("%d peek item\n",x);
+    }
+}
+
+int main()
+{
+    S s;
+    int choice;
+    s.top=-1;
+    do
+    {
+        printf("1->PUSH\n2->POP\n3->PEEK\n4->Exit\n");
+        printf("Enter choice\n");
+        scanf("%d",&choice);
+        switch(choice)
+        {
+          case 1:
+                 PUSH(&s);
+                 break;
+          case 2:
+                 POP(&s);
+                 break;
+          case 3:
+                 PEEK(s);
+                 break;
+          case 4:
+                break;
+          default:
+              printf("Enter the valid choice\n");
+        }
+    }while(choice!=4);
+}
