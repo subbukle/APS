@@ -1,5 +1,6 @@
 //Here we find the maximum amount that can be accomodated for a predefined weight.
-//
+
+
 //Problem to find the maximum profit and which combination of weights produces that maximum profit.
 
 #include<stdio.h>
